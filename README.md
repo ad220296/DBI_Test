@@ -11,7 +11,7 @@ Zu jedem Schwerpunkt gibt es ein eigenes Unter-Repository mit Beispielen, Erklä
 **Trigger-Arten, Zeitpunkte, Beispiele und Vergleiche**
 
 📁 Repository:  
-🔗 [DBI-Instead-Trigger- & Compound Trigger](https://github.com/ad220296/DBI-Test)
+🔗 [Übersicht zu Instead-Trigger & Compound Trigger](https://github.com/ad220296/DBI-Test)
 
 🔍 Enthalten:
 - 🟡 BEFORE/AFTER Trigger
