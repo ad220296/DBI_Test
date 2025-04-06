@@ -51,3 +51,17 @@ Zu jedem Schwerpunkt gibt es ein eigenes Unter-Repository mit Beispielen, Erklä
 - Beispielcode aus dem Unterricht (KING, SAL-Check, etc.)
 
 ---
+
+### 🧠 Native Dynamic SQL
+
+📁 Repository:  
+🔗 [Übersicht zu Native Dynamic SQL](https://github.com/ad220296/Native-Dynamic-SQL)
+
+🧩 Enthalten:
+- `EXECUTE IMMEDIATE` zum dynamischen Ausführen von SQL-Strings  
+- Parameterübergabe mit `USING`  
+- Dynamische Abfragen mit `REF CURSOR`  
+- Grundlagen zum Data Dictionary (kein Auswendiglernen nötig)  
+- Klassische Anwendungsfälle aus der Praxis  
+
+---
