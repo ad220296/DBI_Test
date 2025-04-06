@@ -103,3 +103,50 @@ END;
 
 ✅ So wird der SQL-Text **variabel** – ideal für Reports, Suchabfragen und Benutzerfilter.
 
+
+
+---
+
+## 🔄 Alternative: Automatischer Cursor mit `FOR ... IN SELECT`
+
+Ein **automatischer Cursor** (implizit) mit `FOR`-Schleife ist eine praktische Kurzform.
+
+Oracle übernimmt für dich:
+- `OPEN`  
+- `FETCH`  
+- `EXIT WHEN NOTFOUND`  
+- `CLOSE`
+
+---
+
+### 🧪 Beispiel: `FOR`-Cursor (automatisch)
+
+```sql
+BEGIN
+  FOR emp_rec IN (SELECT ename FROM emp WHERE deptno = 10) LOOP
+    DBMS_OUTPUT.PUT_LINE('Name: ' || emp_rec.ename);
+  END LOOP;
+END;
+/
+```
+
+✅ Weniger Code – ideal, wenn du nur einfach alle Zeilen durchgehen willst.
+
+---
+
+### 📊 Vergleich: Manuell vs. Automatisch
+
+| Merkmal                    | Manueller Cursor       | Automatischer Cursor (`FOR`) |
+|----------------------------|------------------------|-------------------------------|
+| Steuerung durch Entwickler| Vollständig selbst     | Oracle übernimmt              |
+| Codeaufwand               | Mehr                   | Weniger                       |
+| Flexibel mit REF CURSOR?  | ✅ Ja                  | ❌ Nein                        |
+| Ideal bei …               | komplexer Logik        | einfache Ausgabe              |
+
+---
+
+## 🧠 Merksatz:
+
+> Verwende `FOR ... IN SELECT`, wenn du **keine komplexe Steuerung** brauchst  
+> und der **SELECT fix** im Code steht.
+
